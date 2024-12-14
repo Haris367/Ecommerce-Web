@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            position: relative;
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-name {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .product-price {
+            color: green;
+            font-size: 1.1em;
+        }
+
+        .add-to-cart {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #45a049;
+        }
+
+        /* Pop-up notification styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .popup.show {
+            display: block;
+            animation: popupAnimation 1s ease-in-out;
+        }
+
+        @keyframes popupAnimation {
+            0% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="header-placeholder"></div> -->
+    
+    <div class="horizontal-banner">
+        <div class="slider">
+            <img src="banner1.png" alt="Banner 1">
+            <img src="banner2.png" alt="Banner 2">
+            <img src="banner1.png" alt="Banner 1">
+        </div>
+    </div>
+
+        <strong>Top Selling Products 🔥🔥</strong>
+    <section class="products">
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuudaIO1nYQNFC4-ldHdC-l9Az0RGo33KDwg&s"
+                alt="Product Image" class="product-image">
+            <h3 class="product-name">Hawaii Luxury Short Sleeve</h3>
+            <p class="product-price">$50.00</p>
+                 <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://litb-cgis.rightinthebox.com/images/500x675/202306/bps/product/inc/dphpjh1687268461002.jpg"
+                alt="Product Image" class="product-image">
+            <h3 class="product-name">Men's Shirt - 3 Colors</h3>
+            <p class="product-price">$40.00</p>
+            <button class="add-to-cart"onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://i.pinimg.com/236x/78/b0/9b/78b09b5ccb73897b5b82562c736eca70.jpg" alt="Product Image"
+                class="product-image">
+            <h3 class="product-name">Casual Men's Shirt</h3>
+            <p class="product-price">$30.00</p>
+            <button class="add-to-cart"onclick="addToCart()">Add to Cart</button>
+        </div>
+    </section>
+    <div id="popup" class="popup">
+        Product added to cart!
+    </div>
+    <div id="footer-placeholder"></div>
+    <script>
+        function addToCart() {
+            // Show the pop-up
+            const popup = document.getElementById('popup');
+            popup.classList.add('show');
+
+            // Hide the pop-up after 2 seconds
+            setTimeout(function() {
+                popup.classList.remove('show');
+            }, 2000);
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

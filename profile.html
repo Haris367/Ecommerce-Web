@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <div id="header-placeholder"></div> -->
+    <section class="profile-section">
+        <div class="profile-container">
+            <div class="profile-header">
+                <h2>Welcome, <span id="username">Usman</span></h2>
+                <p>Manage your account and orders</p>
+            </div>
+
+            <div class="profile-info">
+                <div class="profile-picture">
+                    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
+                    <button class="upload-btn">Change Picture</button>
+                </div>
+
+                <div class="profile-details">
+                    <h3>Your Details</h3>
+                    <ul>
+                        <li><strong>Name:</strong> Usman</li>
+                        <li><strong>Email:</strong> Usman@gmail.com</li>
+                        <li><strong>Phone:</strong> +1 (555) 123-4567</li>
+                    </ul>
+                    <button class="edit-btn">Edit Profile</button>
+                </div>
+            </div>
+
+
+            <div class="order-history">
+                <h3>Your Order History</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="order-history-body">
+                        <!-- Order history will be populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+    <script src="order.js"></script>
+</body>
+</html>
