@@ -78,6 +78,65 @@
                 transform: translateX(-50%) translateY(0);
             }
         }
+             /* Styling for the video and content section */
+             .content-video-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .content {
+            width: 50%;
+            padding: 20px;
+        }
+
+        .content h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .video-container {
+            width: 45%;
+        }
+
+        video {
+            width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive design for smaller screens */
+        @media screen and (max-width: 768px) {
+            .content-video-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .content,
+            .video-container {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+
+            .content h2 {
+                font-size: 1.5em;
+            }
+
+            .content p {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 
@@ -118,6 +177,23 @@
             <button class="add-to-cart"onclick="addToCart()">Add to Cart</button>
         </div>
     </section>
+     <!-- Video and content section -->
+     <div class="content-video-container">
+        <div class="content">
+            <h2>About @FashionStore</h2>
+            <p>At Fashion Store we believe a great shirt is more than just fabric; it’s a statement. We started our
+                journey to provide stylish and affordable shirts that meet the needs of fashion-forward individuals.</p>
+            <h3>Our Mission:</h3>
+            <p>To bring you the best designs and quality without breaking the bank.</p>
+        </div>
+
+        <div class="video-container">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
     <div id="popup" class="popup">
         Product added to cart!
     </div>
