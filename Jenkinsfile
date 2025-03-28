@@ -25,7 +25,7 @@ pipeline {
                 sshagent(credentials: [env.SSH_CREDENTIALS_ID]) {
                     sh """
                     scp app.tar.gz ${env.EC2_USER}@${env.EC2_IP}:/tmp/
-                    ssh ${env.EC2_USER}@${env.EC2_IP} 'mkdir -p /var/www/html && tar -xzf /tmp/app.tar.gz -C /var/www/html/'
+                    ssh ${env.EC2_USER}@${env.EC2_IP} 'sudo mkdir -p /var/www/html && sudo tar -xzf /tmp/app.tar.gz -C /var/www/html/'
                     """
                 }
             }
